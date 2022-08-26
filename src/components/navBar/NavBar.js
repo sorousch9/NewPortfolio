@@ -8,7 +8,7 @@ import navIcon1 from "../../assets/img/navIcon1.svg";
 import navIcon2 from "../../assets/img/navIcon2.svg";
 import navIcon3 from "../../assets/img/navIcon3.svg";
 
-export  const NavBar = () =>{
+export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -25,8 +25,7 @@ export  const NavBar = () =>{
   }, []);
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
-    
-  }
+  };
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
@@ -41,20 +40,28 @@ export  const NavBar = () =>{
             <Nav.Link
               href="#home"
               className={
-                activeLink === "home" ? "active navbar-link" : "navbar-link"}
-              onClick={() => onUpdateActiveLink("home")}> Home
+                activeLink === "home" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("home")}>
+              Home
             </Nav.Link>
             <Nav.Link
               href="#skills"
               className={
-                activeLink === "skills" ? "active navbar-link" : "navbar-link" }
-              onClick={() => onUpdateActiveLink("skills")}>Skills
+                activeLink === "skills" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("skills")}
+            >
+              Skills
             </Nav.Link>
             <Nav.Link
               href="#projects"
               className={
-                activeLink === "projects" ? "active navbar-link" : "navbar-link"}
-              onClick={() => onUpdateActiveLink("projects")}>Projects
+                activeLink === "projects" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("projects")}
+            >
+              Projects
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
@@ -72,11 +79,12 @@ export  const NavBar = () =>{
             <button
               className="navbar-btn"
               onClick={() => console.log("connected")}
-            ><span>Click On me!</span></button>
-            
+            >
+              <span>Click On me!</span>
+            </button>
           </span>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-}
+};
