@@ -1,0 +1,53 @@
+.abilities {
+    padding: 0 0 50px 0;
+    position: relative;
+  }
+  .abilities-bx {
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: -60px;
+  }
+  .abilities h2 {
+      font-size: 45px;
+      font-weight: 700;
+  }
+  .abilities p {
+      color: #B8B8B8;
+      font-size: 18px;
+      letter-spacing: 0.8px;
+      line-height: 1.5em;
+      margin: 14px 0 75px 0;
+  }
+  .abilities-slider {
+    width: 80%;
+    margin: 0px auto;
+    position: relative;
+  }
+  .react-multiple-carousel__arrow {
+    margin: -40px;
+    position: absolute;
+    outline: 0;
+    transition: all .5s;
+    border-radius: 35px;
+    z-index: 1000;
+    border: 0;
+    background: rgba(0,0,0,0.5);
+    min-width: 43px;
+    min-height: 43px;
+    opacity: 1;
+    cursor: pointer;
+}
+  .abilities-slider .item img {
+    width: 200px;
+    height: 200px;
+    margin: 0px auto 15px auto;
+  }
+  .background-image-left {
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    z-index: -4;
+  }
