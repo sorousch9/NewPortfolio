@@ -1,7 +1,8 @@
 .abilities {
-    padding: 0 0 50px 0;
+  padding: 150px 0 ;
     position: relative;
   }
+
   .abilities-bx {
     background: #151515;
     border-radius: 64px;
@@ -40,12 +41,12 @@
     cursor: pointer;
 }
   .abilities-slider .item img {
-    width: 200px;
-    height: 200px;
+    width: 70%;
+    height: 30%;
     margin: 0px auto 15px auto;
   }
   .background-image-left {
-    top: 0;
+    top: 170px;
     position: absolute;
     bottom: 0;
     width: 40%;

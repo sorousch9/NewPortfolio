@@ -1,0 +1,72 @@
+.mission {
+  padding: 80px 0;
+  position: relative;
+
+  z-index: 1;
+}
+.mission h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+.mission p {
+  color: #b8b8b8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+.mission-imgbx {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.mission-imgbx::before {
+  content: "";
+  background: linear-gradient(90.21deg, #bd5cd3 -5.91%, #555a2fbd 111.58%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+.mission-imgbx:hover::before {
+  height: 100%;
+}
+.mission-txtx {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+.mission-imgbx:hover .mission-txtx {
+  top: 50%;
+  opacity: 1;
+}
+.mission-txtx h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.mission-txtx span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+.background-image-right {
+  top: 20%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  right: 0;
+  z-index: -1;
+}

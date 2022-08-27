@@ -42,43 +42,37 @@ export const NavBar = () => {
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("home")}>
+              onClick={() => onUpdateActiveLink("home")}
+            >
               Home
             </Nav.Link>
             <Nav.Link
-              href="#skills"
+              href="#abilities"
               className={
-                activeLink === "skills" ? "active navbar-link" : "navbar-link"
+                activeLink === "abilities" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("skills")}
+              onClick={() => onUpdateActiveLink("abilities")}
             >
               Abilities
             </Nav.Link>
             <Nav.Link
-              href="#projects"
-              className={
-                activeLink === "projects" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              Projects
+              href="#missions" className={activeLink === "missions" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink("missions")}> Missions
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/soroush9/">
+              <a href="https://www.linkedin.com/company/nasa">
                 <img src={navIcon1} alt="" />
               </a>
-              <a href="https://www.linkedin.com/in/soroush9/">
+              <a href="https://www.facebook.com/NASAWebb/">
                 <img src={navIcon2} alt="" />
               </a>
-              <a href="https://www.linkedin.com/in/soroush9/">
+              <a href="https://www.instagram.com/nasawebb">
                 <img src={navIcon3} alt="" />
               </a>
             </div>
             <button
               className="navbar-btn"
-              onClick={() => console.log("connected")}
             >
               <span>Click On me!</span>
             </button>
