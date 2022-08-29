@@ -3,8 +3,10 @@ import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 
 export const Newsletter = ({ status, message, onValidated }) => {
-    const [email, setEmail] = useState('');
-  
+    const [email, setEmail] = useState("");
+    const handleChange = event => {
+      setEmail(event.target.value);
+        };
     useEffect(() => {
       if (status === 'success') clearFields();
     }, [status])
@@ -35,7 +37,11 @@ export const Newsletter = ({ status, message, onValidated }) => {
               <Col md={6} xl={7}>
                 <form onSubmit={handleSubmit}>
                   <div className="new-email-bx">
-                    <input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email Address" />
+                    <input 
+                    value={email} 
+                    type="email" 
+                    onChange={(event) => setEmail(handleChange)} 
+                    placeholder="Email Address" />
                     <button type="submit">Submit</button>
                   </div>
                 </form>

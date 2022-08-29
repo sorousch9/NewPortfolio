@@ -78,7 +78,7 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          value={formDetails.firstName}
+                          defaultValue={formDetails.firstName}
                           placeholder="First Name"
                           onClick={(e) =>
                             onFormUpdateHandler("firstName", e.target.value)
@@ -88,7 +88,7 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          value={formDetails.lastName}
+                          defaultValue={formDetails.lastName}
                           placeholder="Last Name"
                           onClick={(e) =>
                             onFormUpdateHandler("lastName", e.target.value)
@@ -98,7 +98,7 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="email"
-                          value={formDetails.email}
+                          defaultValue={formDetails.email}
                           placeholder="Please enter your email address"
                           onClick={(e) =>
                             onFormUpdateHandler("email", e.target.value)
@@ -108,20 +108,20 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="tel"
-                          value={formDetails.phone}
+                          defaultValue={formDetails.phone}
                           placeholder="Please enter your phone number"
                           onClick={(e) =>
                             onFormUpdateHandler("phone", e.target.value)
                           }
                         />
                       </Col>
-                      <Col size={12} className="px-1">
-                        <textarea
+                      <Col >
+                      <textarea
                           row="6"
-                          value={formDetails.message}
+                          defaultValue={formDetails.message}
                           placeholder="Please enter your message"
                           onClick={(e) =>
-                            onFormUpdateHandler("message", e.target.value)
+                            onFormUpdateHandler("message",e.target.value)
                           }
                         ></textarea>
                         <button type="submit">
