@@ -26,7 +26,7 @@
 }
 .mission-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #bd5cd3 -5.91%, #555a2fbd 111.58%);
+  background: linear-gradient(90.21deg, #43cea2 -5.91%, #185a9d 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
