@@ -55,20 +55,18 @@ export const Banner = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
+                    isVisible ? "animate__animated animate__slideInUp" : ""
                   }
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>
-                    {` Hi! I'm James Webb !`}{" "}
-                    <span
+                  <h1>{"Hi! I'm James Webb "}</h1>
+                  <span
                       className="txt-rotate"
                       dataPeriod="1000"
                       data-rotate='[ "Science", "Technology", "Engineering, Arts,and Math" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
-                  </h1>
                   <p>
                     I im the largest telescope ever launched into space. In the
                     ~2 weeks after launch, i unfolds from its compact launch
@@ -87,18 +85,10 @@ export const Banner = () => {
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
-                  }
-                >
+                <div className="imgheader">
                   <img src={headerImg} alt="Header Img" />
                 </div>
-              )}
-            </TrackVisibility>
-          </Col>
+              </Col>
         </Row>
       </Container>
     </section>
