@@ -1,9 +1,12 @@
 This project was bootstrapped with Create React App.
 Built using:
 
-Front-end library: React
-CSS framework: React-bootstrap
-CSS animations library: Animate.css
+Front-end library: React,
+CSS framework: React-bootstrap,
+CSS animations library: Animate.css,
+
+![Alt text](/screencapture.png?raw=true "Optional Title")
+
 
 # Getting Started with Create React App
 
