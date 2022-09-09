@@ -5,7 +5,7 @@ import fgs from "../../assets/img/fgs.png";
 import Nircam from "../../assets/img/Nircam.png";
 import NIRSpec from "../../assets/img/NIRSpec.png";
 import miri from "../../assets/img/miri.png";
-import BackSharp from "../../assets/img/BackSharp.png";
+// import BackSharp from "../../assets/img/52007533580.jpg";
 export const Abilities = () => {
     const responsive = {
         superLargeDesktop: {
@@ -25,7 +25,6 @@ export const Abilities = () => {
           items: 1
         }
       };
-
       return (
         <section className="abilities" id="abilities">
         <div className="container">
@@ -56,7 +55,7 @@ export const Abilities = () => {
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={BackSharp} alt="" />
+        {/* <img className="background-image-left" src={BackSharp} alt="" /> */}
     </section>
   )
 }

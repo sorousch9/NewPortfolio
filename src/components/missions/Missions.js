@@ -7,7 +7,7 @@ import southern_Ring from "../../assets/img/Southern_Ring_Nebula_NIRCam_pillars.
 import cartwheel from "../../assets/img/Cartwheel_Galaxy_NIRCam_and_MIRI_pillars.jpg";
 import jupiter from "../../assets/img/Jupiter_showcases_aurorae_hazes_NIRCam_widefield_view_pillars.jpg";
 import exoplanet from "../../assets/img/Exoplanet_WASP-39_b_NIRSpec_transit_light_curves_pillars.jpg";
-import BackSharp2 from "../../assets/img/BackSharp2.png";
+// import BackSharp2 from "../../assets/img/BackSharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -18,6 +18,7 @@ export const Missions  = () => {
         description: "Stars derive from, and contribute to, gas and dust in mass quantities, swirling around galaxies. The dust evolves over time and Webb can study nearby and dynamic interacting galaxies to see the dust in action. Now, scientists can get a rare look, in unprecedented detail, at how interacting galaxies are triggering star formation in each other and how the gas in these galaxies is being disturbed.",
         imgUrl: bHImg,
       },
+      
       {
         title: "Cosmic Cliffs",
         description: "The new images showcase how Webb’s cameras can peer through cosmic dust, shedding new light on how stars form. Objects in earliest, rapid phases of star formation difficult to capture, but Webb’s extreme sensitivity, spatial resolution, and imaging capability can chronicle these elusive events.",
@@ -86,7 +87,7 @@ export const Missions  = () => {
       </Col>
     </Row>
   </Container>
-  <img className="background-image-right" src={BackSharp2} alt="" />
+  {/* <img className="background-image-right" src={BackSharp2} alt="" /> */}
 </section>
   )
 }

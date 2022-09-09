@@ -2,6 +2,7 @@ import { Col } from "react-bootstrap";
 
 export const MissionCard = ({ title, description, imgUrl })  => {
   return (
+    
     <Col size={12} sm={6} md={4}>
       <div className="mission-imgbx">
         <img src={imgUrl} alt=""/>

@@ -2,7 +2,6 @@
   padding: 150px 0 ;
     position: relative;
   }
-
   .abilities-bx {
     background: #151515;
     border-radius: 64px;
@@ -14,6 +13,7 @@
       font-size: 45px;
       font-weight: 700;
   }
+  
   .abilities p {
       color: #B8B8B8;
       font-size: 18px;

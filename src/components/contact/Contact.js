@@ -13,6 +13,7 @@ export const Contact = () => {
     phone: "",
     message: "",
   };
+  
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("send");
   const [status, setStatus] = useState({});

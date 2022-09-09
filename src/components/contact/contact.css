@@ -1,5 +1,5 @@
 .contact {
-    background: linear-gradient(90.21deg, #43cea2 -5.91%, #185a9d 111.58%);
+    background: linear-gradient(90.21deg, #43cea24d -5.91%, #185b9d76 111.58%);
     padding: 60px 0 200px 0;
   }
   .title {
@@ -10,6 +10,7 @@
   .contact img {
     width: 92%;
   }
+  
   .contact h2 {
       font-size: 45px;
       font-weight: 700;

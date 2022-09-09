@@ -21,14 +21,22 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
+ 
+    
+  
 }
 body {
   font-weight: 400;
   overflow-x: hidden;
-  background-color: #121212;
   position: relative !important;
+  
   color: #fff !important;
   font-family: "Centra", sans-serif !important;
+  background: url(assets/img/52007533580.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 h1,
 h2,
@@ -40,7 +48,6 @@ h6 {
   padding: 0;
   line-height: normal;
 }
-
 p,
 a,
 li,
