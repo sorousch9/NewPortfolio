@@ -26,7 +26,7 @@ export const NavBar = () => {
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
-  
+
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
@@ -50,17 +50,33 @@ export const NavBar = () => {
             <Nav.Link
               href="#abilities"
               className={
-                activeLink === "abilities" ? "active navbar-link" : "navbar-link"
+                activeLink === "abilities"
+                  ? "active navbar-link"
+                  : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("abilities")}
             >
               Abilities
             </Nav.Link>
             <Nav.Link
-              href="#missions" className={activeLink === "missions" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink("missions")}> Missions
+              href="#missions"
+              className={
+                activeLink === "missions" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("missions")}
+            >
+              {" "}
+              Missions
             </Nav.Link>
             <Nav.Link
-              href="#contact" className={activeLink === "contact" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink("contact")}> Contact
+              href="#contact"
+              className={
+                activeLink === "contact" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("contact")}
+            >
+              {" "}
+              Contact
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
@@ -75,9 +91,7 @@ export const NavBar = () => {
                 <img src={navIcon3} alt="" />
               </a>
             </div>
-            <button
-              className="navbar-btn"
-            >
+            <button className="navbar-btn">
               <span>Click On me!</span>
             </button>
           </span>
