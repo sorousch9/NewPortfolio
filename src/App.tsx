@@ -1,10 +1,11 @@
 import "./App.css";
 import { Abilities } from "./components/abilities/Abilities";
 import { Banner } from "./components/banner/Banner";
-import { NavBar } from "./components/navBar/NavBar";
-import { Missions } from "./components/missions/Missions";
+
+import  Missions from "./components/missions/Missions";
 import { Contact } from "./components/contact/Contact";
 import { Footer } from "./components/Footer/Footer";
+import NavBar from "./components/navBar/NavBar";
 
 function App() {
   return (
