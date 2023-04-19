@@ -1,5 +1,4 @@
-import "./navbar.css";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, FC } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,10 +6,11 @@ import logo from "../../assets/img/logo.png";
 import navIcon1 from "../../assets/img/navIcon1.svg";
 import navIcon2 from "../../assets/img/navIcon2.svg";
 import navIcon3 from "../../assets/img/navIcon3.svg";
+import "./navbar.css";
 
-export const NavBar = () => {
-  const [activeLink, setActiveLink] = useState("home");
-  const [scrolled, setScrolled] = useState(false);
+const NavBar: FC = () => {
+  const [activeLink, setActiveLink] = useState<string>("home");
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,7 +23,8 @@ export const NavBar = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const onUpdateActiveLink = (value) => {
+
+  const onUpdateActiveLink = (value: string) => {
     setActiveLink(value);
   };
 
@@ -65,7 +66,6 @@ export const NavBar = () => {
               }
               onClick={() => onUpdateActiveLink("missions")}
             >
-              {" "}
               Missions
             </Nav.Link>
             <Nav.Link
@@ -75,7 +75,6 @@ export const NavBar = () => {
               }
               onClick={() => onUpdateActiveLink("contact")}
             >
-              {" "}
               Contact
             </Nav.Link>
           </Nav>
@@ -100,3 +99,5 @@ export const NavBar = () => {
     </Navbar>
   );
 };
+
+export default NavBar;
