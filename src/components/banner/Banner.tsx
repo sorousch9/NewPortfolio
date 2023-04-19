@@ -1,21 +1,21 @@
-import "./banner.css";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import TrackVisibility from "react-on-screen";
 import headerImg from "../../assets/img/webb.png";
 import "animate.css";
+import "./banner.css";
 
-export const Banner = () => {
+export const Banner: React.FC = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Science", "Technology", "Engineering" ];
+  const toRotate: string[] = ["Science", "Technology", "Engineering"];
   const [text, setText] = useState(" ");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
 
   useEffect(() => {
-    let ticker = setInterval(() => {
+    const ticker = setInterval(() => {
       tick();
     }, delta);
 
@@ -23,7 +23,6 @@ export const Banner = () => {
       clearInterval(ticker);
     };
   });
-  
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -62,11 +61,11 @@ export const Banner = () => {
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>{"Hi! I'm James Webb!"}</h1>
                   <span
-                      className="txt-rotate"
-                      data-rotate='[ "Science", "Technology", "Engineering, Arts,and Math" ]'
-                    >
-                      <span className="wrap">{text}</span>
-                    </span>
+                    className="txt-rotate"
+                    data-rotate='[ "Science", "Technology", "Engineering, Arts,and Math" ]'
+                  >
+                    <span className="wrap">{text}</span>
+                  </span>
                   <p>
                     I im the largest telescope ever launched into space. In the
                     ~2 weeks after launch, i unfolds from its compact launch
@@ -85,10 +84,10 @@ export const Banner = () => {
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-                <div className="imgheader">
-                  <img src={headerImg} alt="Header Img" />
-                </div>
-              </Col>
+            <div className="imgheader">
+              <img src={headerImg} alt="Header Img" />
+            </div>
+          </Col>
         </Row>
       </Container>
     </section>
