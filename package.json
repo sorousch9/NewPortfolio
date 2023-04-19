@@ -10,6 +10,7 @@
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
+    "@types/react-mailchimp-subscribe": "^2.1.1",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.3",
     "cors": "^2.8.5",
