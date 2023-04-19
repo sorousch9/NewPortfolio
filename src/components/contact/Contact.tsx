@@ -5,28 +5,41 @@ import ContactImage from "../../assets/img/Mail-sent.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
-export const Contact = () => {
-  const formInitialDetails = {
+interface FormDetails {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+export const Contact: React.FC = () => {
+  const formInitialDetails: FormDetails = {
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     message: "",
   };
-  
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("send");
-  const [status, setStatus] = useState({});
 
-  const onFormUpdateHandler = (category, value) => {
+  const [formDetails, setFormDetails] =
+    useState<FormDetails>(formInitialDetails);
+  const [buttonText, setButtonText] = useState<string>("Send");
+  const [status, setStatus] = useState<{ success: boolean; message: string }>({
+    success: false,
+    message: "",
+  });
+
+  const onFormUpdateHandler = (category: keyof FormDetails, value: string) => {
     setFormDetails({
       ...formDetails,
       [category]: value,
     });
   };
-  const submitFormHandler = async (e) => {
+
+  const submitFormHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setButtonText("Sendig...");
+    setButtonText("Sending...");
     let response = await fetch("http://localhost:5000/contact", {
       method: "POST",
       headers: {
@@ -38,10 +51,10 @@ export const Contact = () => {
     let result = await response.json();
     setFormDetails(formInitialDetails);
     if (result.code === 200) {
-      setStatus({ succes: true, message: "Message sent successfully" });
+      setStatus({ success: true, message: "Message sent successfully" });
     } else {
       setStatus({
-        succes: false,
+        success: false,
         message: "Something went wrong, please try again later.",
       });
     }
@@ -52,7 +65,7 @@ export const Contact = () => {
       <Container>
         <Row className="alein-item-center">
           <h2 className="title">Get in touch</h2>
-          <Col size={12} md={6}>
+          <Col xs={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <img
@@ -65,33 +78,32 @@ export const Contact = () => {
               )}
             </TrackVisibility>
           </Col>
-          <Col size={12} md={6}>
+          <Col xs={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
                   className={
                     isVisible ? "animate__animated animate__rotateIn" : ""
                   }
-                  
                 >
                   <form className="form" onSubmit={submitFormHandler}>
                     <Row>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col xs={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          defaultValue={formDetails.firstName}
+                          value={formDetails.firstName}
                           placeholder="First Name"
-                          onClick={(e) =>
+                          onChange={(e) =>
                             onFormUpdateHandler("firstName", e.target.value)
                           }
                         />
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col xs={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          defaultValue={formDetails.lastName}
+                          value={formDetails.lastName}
                           placeholder="Last Name"
-                          onClick={(e) =>
+                          onChange={(e) =>
                             onFormUpdateHandler("lastName", e.target.value)
                           }
                         />
@@ -101,7 +113,7 @@ export const Contact = () => {
                           type="email"
                           defaultValue={formDetails.email}
                           placeholder="Please enter your email address"
-                          onClick={(e) =>
+                          onChange={(e) =>
                             onFormUpdateHandler("email", e.target.value)
                           }
                         />
@@ -111,18 +123,18 @@ export const Contact = () => {
                           type="tel"
                           defaultValue={formDetails.phone}
                           placeholder="Please enter your phone number"
-                          onClick={(e) =>
+                          onChange={(e) =>
                             onFormUpdateHandler("phone", e.target.value)
                           }
                         />
                       </Col>
-                      <Col >
-                      <textarea
-                          row="6"
+                      <Col>
+                        <textarea
+                         
                           defaultValue={formDetails.message}
                           placeholder="Please enter your message"
-                          onClick={(e) =>
-                            onFormUpdateHandler("message",e.target.value)
+                          onChange={(e) =>
+                            onFormUpdateHandler("message", e.target.value)
                           }
                         ></textarea>
                         <button type="submit">
